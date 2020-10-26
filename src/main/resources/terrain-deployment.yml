@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: terrain
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: terrain
+  template:
+    metadata:
+      labels:
+        app: terrain
+    spec:
+      containers:
+        -
+          image: my_story/terrain_service
+          name: terrain
+          imagePullPolicy: Never
+          ports:
+            -
+              containerPort: 8084
+              name: terrain
+          env:
+            - name: POSTGRES_ENDPOINT
+              value: "jdbc:postgresql://127.0.1.0:5432/"
+            - name: POSTGRES_PASSWORD
+              value: "hello"
+            - name: POSTGRES_USERNAME
+              value: "postgres"
+            - name: TERRAIN_URL
+              value: "http://story-terrain"

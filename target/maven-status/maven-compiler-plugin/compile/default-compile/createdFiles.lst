@@ -1,0 +1,7 @@
+distributedsystems/terrainService/api/restControllers/TerrainController.class
+distributedsystems/terrainService/services/repository/TerrainRepository.class
+distributedsystems/terrainService/services/Service/TerrainService.class
+distributedsystems/terrainService/TerrainApplication.class
+distributedsystems/terrainService/services/models/Terrain.class
+distributedsystems/terrainService/api/payload/TerrainPayload.class
+distributedsystems/terrainService/services/IService/TerrainIService.class
